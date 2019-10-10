@@ -10,6 +10,7 @@ BBLAYERS ?= " \
   ${TOPDIR}/../sources/poky/meta-poky \
   ${TOPDIR}/../sources/poky/meta-yocto-bsp \
   ${TOPDIR}/../sources/meta-openembedded/meta-oe \
+  ${TOPDIR}/../sources/meta-qt5 \
   ${TOPDIR}/../sources/meta-sunxi \
   ${TOPDIR}/../sources/meta-orangepi \
 "

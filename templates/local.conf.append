@@ -1,6 +1,6 @@
 # Appended fragment from meta-mender-community/meta-mender-sunxi/templates
 
-MACHINE ?= "orange-pi-pc-plus"
+MACHINE ?= "orange-pi-pc"
 
 IMAGE_INSTALL_append = " kernel-image kernel-devicetree"
 
@@ -12,3 +12,4 @@ IMAGE_BOOT_FILES = "boot.scr"
 
 IMAGE_BOOTLOADER_FILE = "u-boot-sunxi-with-spl.bin"
 IMAGE_BOOTLOADER_BOOTSECTOR_OFFSET = "16"
+DISTRO = "orangepi"
