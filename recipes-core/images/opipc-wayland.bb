@@ -16,12 +16,13 @@ QT5_PKGS = " \
   cinematicexperience \ 
 "
 
-#IMAGE_INSTALL += " \
-#  ${EXTRA} \
-#  ${QT5_PKGS} \
-#"
+IMAGE_INSTALL += " \
+  packagegroup-core-buildessential \
+  ${EXTRA} \
+  ${QT5_PKGS} \
+"
 
-#IMAGE_FEATURES += "x11"
+IMAGE_FEATURES += "x11"
 
 IMAGE_FEATURES += " \
     debug-tweaks \
@@ -37,4 +38,5 @@ IMAGE_FEATURES += " \
 CORE_IMAGE_EXTRA_INSTALL += " \
     packagegroup-core-full-cmdline \
     ${@bb.utils.contains('DISTRO_FEATURES', 'wayland', 'weston-init', '', d)} \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'x11 wayland', 'weston-xwayland xterm', '', d)} \
 "
